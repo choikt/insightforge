@@ -17,5 +17,5 @@ phases:
       - terraform apply -auto-approve 
   post_build:
     commands:
-      - terraform destroy -auto-approve 
+      - terraform destroy -auto-approve
       - echo "Build completed on `date`"
