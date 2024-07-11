@@ -62,7 +62,7 @@ variable "certificate_arn_api" {
 variable "custom_domain_name" {
 
   type        = string
-  default = "api.soldesk-insightforge.site"
+  default = "api.insightforge-api.site"
 
 }
 variable "cloudfront_zone_id" {

@@ -15,7 +15,7 @@ provider "aws" {
 # }
 resource "aws_route53_record" "api_record" {
   zone_id = var.cloudfront_zone_id
-  name    = "api.soldesk-insightforge.site"
+  name    = "api.insightforge-api.site"
   type    = "A"
 
   alias {
