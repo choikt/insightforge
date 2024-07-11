@@ -25,7 +25,7 @@ module "lambda_save_survey_data" {
   function_name = "SaveSurveyData"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.surveys_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
@@ -37,7 +37,7 @@ module "lambda_get_survey" {
   function_name = "GetSurvey"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.surveys_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
@@ -49,7 +49,7 @@ module "lambda_submit_survey_response" {
   function_name = "SubmitSurveyResponse"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.survey_responses_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
@@ -61,7 +61,7 @@ module "lambda_view_survey" {
   function_name = "ViewSurvey"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.surveys_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
@@ -72,7 +72,7 @@ module "lambda_Surveys_items" {
   function_name = "Surveys-items"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.surveys_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
@@ -83,7 +83,7 @@ module "lambda_SurveyResponses_items" {
   function_name = "SurveyResponses-items"
   role_arn      = module.iam.lambda_dynamodb_role_arn
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.12"
+  runtime       = "python3.10"
   dynamodb_table = module.dynamodb_surveys.surveys_table_name
   source_arn    = "arn:aws:execute-api:${var.region}:${data.aws_caller_identity.current.account_id}:*"
 }
