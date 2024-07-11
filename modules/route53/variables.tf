@@ -8,15 +8,15 @@ variable "zone_id" {
   type        = string
 }
 
-variable "alb_dns_name" {
-  description = "The DNS name of the ALB."
-  type        = string
-}
+# variable "alb_dns_name" {
+#   description = "The DNS name of the ALB."
+#   type        = string
+# }
 
-variable "alb_under_zone_id" {
-  description = "The zone ID of the ALB."
-  type        = string
-}
+# variable "alb_under_zone_id" {
+#   description = "The zone ID of the ALB."
+#   type        = string
+# }
 
 variable "api_dns_name" {
   description = "The DNS name of the ALB."
