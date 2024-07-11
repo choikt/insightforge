@@ -97,7 +97,7 @@ module "apigateway" {
   lambda_invoke_arn_get_survey = module.lambda_get_survey.lambda_invoke_arn
   lambda_invoke_arn_submit_survey_response = module.lambda_submit_survey_response.lambda_invoke_arn
   lambda_invoke_arn_view_survey = module.lambda_view_survey.lambda_invoke_arn
-  certificate_arn = var.certificate_arn
+  certificate_arn = var.certificate_arn_api
   custom_domain_name = var.custom_domain_name
 }
 

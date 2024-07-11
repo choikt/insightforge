@@ -52,6 +52,13 @@ variable "certificate_arn" {
   default = "arn:aws:acm:ap-northeast-2:339713013785:certificate/c72f85e0-8fdc-4df8-98a0-3af799f3b1db"
 
 }
+
+variable "certificate_arn_api" {
+
+  type        = string
+  default = "arn:aws:acm:ap-northeast-2:339713013785:certificate/203fe3a6-f0bf-4625-b29f-9e45476a268c"
+
+}
 variable "custom_domain_name" {
 
   type        = string
