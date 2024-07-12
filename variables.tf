@@ -40,18 +40,6 @@ variable "survey_responses_table_name" {
   default     = "SurveyResponses"
 }
 
-variable "zone_id" {
-  description = "The ID of the Route 53 hosted zone."
-  type        = string
-  default = "Z0021153XSC8ONZ2C2RU"
-}
-
-variable "certificate_arn" {
-
-  type        = string
-  default = "arn:aws:acm:ap-northeast-2:339713013785:certificate/c72f85e0-8fdc-4df8-98a0-3af799f3b1db"
-
-}
 
 variable "certificate_arn_api" {
 

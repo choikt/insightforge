@@ -10,7 +10,12 @@ resource "aws_instance" "my_web_server" {
     sudo yum update -y
     sudo amazon-linux-extras install epel -y
     sudo yum install -y ansible
+    sudo yum install pip -y
+    sudo pip3 install boto3 botocore
+    sudo pip install boto3 botocore
   EOF
+
+  iam_instance_profile = var.mywebserver_iam_instance_profile_name
 
   tags = {
     Name = var.instance_name

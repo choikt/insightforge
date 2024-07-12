@@ -104,7 +104,6 @@ module "apigateway" {
 module "route53" {
   source = "./modules/route53"
   region       = var.region
-  zone_id      = var.zone_id
   alb_dns_name = module.load_balancer.nginx_alb_dns_name
   alb_under_zone_id  = module.load_balancer.nginx_alb_zone_id
   api_dns_name = module.apigateway.api_domain_name
@@ -269,11 +268,7 @@ module "ec2" {
   subnet_id = module.vpc.subnet_id
   security_group_id = module.vpc.security_group_id
   instance_name = "EC2-mywebserver-deploy"
-}
-
-
-output "api_endpoint" {
-  value = module.apigateway.api_endpoint
+  mywebserver_iam_instance_profile_name = module.iam.mywebserver_instance_profile_name
 }
 
 module "cloudwatch_alarms_Surveys" {
@@ -288,3 +283,23 @@ module "cloudwatch_alarms_SurveyResponses" {
   lambda_function_arn = module.lambda_SurveyResponses_items.lambda_function_arn
   name= "dynamodb_SurveyResponses_items"
 }
+
+module "resource_group" {
+  source = "./modules/resource_group"
+  region = var.region
+
+  resource_group_name        = "EC2-mywebserver-deploy"
+  resource_group_description = "Resource group for EC2 instances with specific tags"
+  tag_key                    = "Name"
+  tag_value                  = "EC2-mywebserver-deploy"
+  
+}
+
+module "glue" {
+  source = "./modules/glue"
+  
+  region = var.region
+  glue_role_arn = module.iam.glue_role_arn
+
+}
+

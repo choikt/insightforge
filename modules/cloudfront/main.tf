@@ -1,6 +1,6 @@
 resource "aws_cloudfront_distribution" "website_distribution" {
   origin {
-    domain_name = "insightforge-api.site.s3.ap-northeast-2.amazonaws.com"
+    domain_name = "insightforge-api.site.site.s3.ap-northeast-2.amazonaws.com"
     origin_id   = "S3-insightforge-api.site"
 
     

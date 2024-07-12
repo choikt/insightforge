@@ -3,10 +3,7 @@ variable "region" {
   type        = string
 }
 
-variable "zone_id" {
-  description = "The ID of the Route 53 hosted zone."
-  type        = string
-}
+
 
 variable "alb_dns_name" {
   description = "The DNS name of the ALB."
