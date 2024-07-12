@@ -170,7 +170,7 @@ module "load_balancer" {
   tomcat_security_group   = module.vpc.tomcat_security_group
   tomcat_target_group_arn = module.target_group.tomcat_target_group_arn
 
-  acm_certificate_arn     = var.certificate_arn
+  acm_certificate_arn     = var.certificate_arn_api
 }
 
 
