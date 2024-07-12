@@ -42,27 +42,23 @@ variable "survey_responses_table_name" {
 
 
 variable "certificate_arn_api" {
-
   type        = string
-  default = "arn:aws:acm:ap-northeast-2:339713013785:certificate/203fe3a6-f0bf-4625-b29f-9e45476a268c"
-
+  default = "arn:aws:acm:ap-northeast-2:339713013785:certificate/b800ce41-95e2-4113-ad7a-6dfe8a4f5040"
 }
-variable "custom_domain_name" {
 
+variable "custom_domain_name" {
   type        = string
   default = "api.insightforge-api.site"
 
 }
 variable "cloudfront_zone_id" {
-
   type        = string
   default = "Z00569421KQTQAF45T9VA"
 
 }
 
 variable "cloudfront_certificate" {
-
   type        = string
-  default = "arn:aws:acm:us-east-1:339713013785:certificate/8d91c442-424f-4289-b7fc-2bd16034a560"
+  default = "arn:aws:acm:us-east-1:339713013785:certificate/f150d65e-0b31-4610-b4e5-cbd1415d13e9"
 
 }

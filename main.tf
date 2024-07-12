@@ -196,7 +196,6 @@ module "launch_template" {
 
 module "autoscaling" {
   source = "./modules/autoscaling"
-
   region                      = var.region
   nginx_pub_2a_launch_template_id  = module.launch_template.nginx_pub_2a_id
   nginx_pub_2c_launch_template_id  = module.launch_template.nginx_pub_2c_id
@@ -224,8 +223,6 @@ module "notifications" {
 module "cloudwatch_alarms" {
   source = "./modules/cloudwatch_alarms"
   region = var.region
-
-
   nginx_pub_2a_arn  = module.notifications.nginx_pub_2a_arn
   nginx_pub_2c_arn  = module.notifications.nginx_pub_2c_arn
   tomcat_pri_2a_arn = module.notifications.tomcat_pri_2a_arn
