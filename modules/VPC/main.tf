@@ -119,6 +119,7 @@ resource "aws_route_table_association" "pub-rt-assoc-NGINX-2C" {
 
 # NAT 게이트웨이 생성
 resource "aws_eip" "terraform-nat-eip" {
+  vpc = true
   tags = {
     Name = "VEC-PRD-NAT-EIP-2A"
   }
