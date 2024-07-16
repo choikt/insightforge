@@ -175,11 +175,9 @@ module "load_balancer" {
 
 
 
-#영구 삭제
 
 module "launch_template" {
   source = "./modules/launch_template"
-
   region               = var.region
   ami_id               = "ami-0fd54cba47d6e98dc" # 원하는 AMI ID로 변경
   key_name             = "soldesk.pem"
