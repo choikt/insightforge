@@ -14,7 +14,7 @@ resource "aws_cloudwatch_event_rule" "dynamodb_Surveys_items" {
 
 resource "aws_cloudwatch_event_target" "lambda_target" {
   rule      = aws_cloudwatch_event_rule.dynamodb_Surveys_items.name
-  target_id = "Surveys-items"
+  target_id = var.lambda_function_name
   arn       = var.lambda_function_arn
 }
 
