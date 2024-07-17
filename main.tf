@@ -176,6 +176,7 @@ module "load_balancer" {
 
 
 
+
 module "launch_template" {
   source = "./modules/launch_template"
   region               = var.region
