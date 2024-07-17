@@ -15,7 +15,7 @@ resource "aws_glue_catalog_database" "tomcat_db" {
 }
 
 resource "aws_glue_crawler" "dynamodb_surveys_crawler" {
-  name          = "dynamodb-surveys-crawler"
+  name          = "dynamodb-surveys-crawler-choi"
   role          = var.glue_role_arn
   database_name = aws_glue_catalog_database.dynamodb_surveys_db.name
   table_prefix  = "item_"
@@ -42,7 +42,7 @@ resource "aws_glue_crawler" "dynamodb_surveys_crawler" {
 }
 
 resource "aws_glue_crawler" "dynamodb_surveyresponses_crawler" {
-  name          = "dynamodb-surveyresponses-crawler"
+  name          = "dynamodb-surveyresponses-crawler-choi"
   role          = var.glue_role_arn
   database_name = aws_glue_catalog_database.dynamodb_surveyresponses_db.name
   table_prefix  = "item_"
