@@ -95,7 +95,6 @@ resource "aws_glue_crawler" "nginx_crawler" {
     }
   })
 }
-
 resource "aws_glue_crawler" "tomcat_crawler" {
   name          = "aws-waf-logs-tomcat-crawler"
   role          = var.glue_role_arn
