@@ -1,9 +1,9 @@
 resource "aws_glue_catalog_database" "dynamodb_surveys_db" {
-  name = "dynamodb_surveys_db"
+  name = "dynamodb_surveys_db_choi"
 }
 
 resource "aws_glue_catalog_database" "dynamodb_surveyresponses_db" {
-  name = "dynamodb_surveyresponses_db"
+  name = "dynamodb_surveyresponses_db_choi"
 }
 
 resource "aws_glue_catalog_database" "nginx_db" {
