@@ -21,7 +21,7 @@ resource "aws_glue_crawler" "dynamodb_surveys_crawler" {
   table_prefix  = "item_"
 
   s3_target {
-    path = "s3://aws-dynamodb-surveys-item"
+    path = "s3://aws-dynamodb-surveys-item-choi"
   }
 
   schedule = "cron(0 0 * * ? *)"  # 매일 자정에 실행
@@ -48,7 +48,7 @@ resource "aws_glue_crawler" "dynamodb_surveyresponses_crawler" {
   table_prefix  = "item_"
 
   s3_target {
-    path = "s3://aws-dynamodb-surveyresponses-item"
+    path = "s3://aws-dynamodb-surveyresponses-item-choi"
   }
 
   schedule = "cron(0 0 * * ? *)"  # 매일 자정에 실행
