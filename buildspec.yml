@@ -19,7 +19,5 @@ phases:
       - terraform apply -auto-approve 
   post_build:
     commands:
-      # - cd ansible
-      # - terraform init
-      # - terraform apply -auto-approve
+
       - echo "Build completed on `date`"
